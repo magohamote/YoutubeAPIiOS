@@ -9,18 +9,19 @@
 import Foundation
 
 struct Thumbnail {
-    var url: String
+    var url: URL
     var width: Int
     var height: Int
     
-    init(url: String, width: Int, height: Int) {
+    init(url: URL, width: Int, height: Int) {
         self.url = url
         self.width = width
         self.height = height
     }
     
     init?(withJson json: [String : Any]?) {
-        if let url = json?["url"] as? String,
+        if let urlString = json?["url"] as? String,
+            let url = URL(string: urlString),
             let width = json?["width"] as? Int,
             let height = json?["height"] as? Int {
             

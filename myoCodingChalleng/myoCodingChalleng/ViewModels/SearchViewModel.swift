@@ -9,7 +9,7 @@
 import Foundation
 
 protocol SearchViewModelDelegate: class {
-    func didReceiveSearchResult(videos: [Video]?)
+    func didReceiveSearchResult(videos: [Video]?, nextPageToken: String)
     func didFailGetSearchResultWithError(error: Error? )
 }
 
@@ -19,10 +19,16 @@ class SearchViewModel {
     
     internal var service = Service()
     
-    func search(searchTerms: String) {
-        let urlString = "\(URLs.baseURL)\(URLs.searchedObject)&q=\(searchTerms)\(URLs.searchType)&key=\(Keys.apiKey)"
+    func search(withSearchTerms searchTerms: String, nextPageToken: String? = nil) {
         
-        print(urlString)
+        var urlString = ""
+        
+        if let token = nextPageToken {
+            urlString = "\(URLs.baseURL)\(URLs.searchedObject)pageToken=\(token)&q=\(searchTerms)\(URLs.searchType)&key=\(Keys.apiKey)"
+        } else {
+            urlString = "\(URLs.baseURL)\(URLs.searchedObject)q=\(searchTerms)\(URLs.searchType)&key=\(Keys.apiKey)"
+        }
+        
         guard let targetURL = URL(string: urlString) else {
             return
         }
@@ -37,7 +43,7 @@ class SearchViewModel {
                     self.delegate?.didFailGetSearchResultWithError(error: error)
                 }
                 
-                guard let resultsDict = _resultsDict, let videosJson = resultsDict["items"] as? [[String : Any]] else {
+                guard let resultsDict = _resultsDict, let nextPageToken = resultsDict["nextPageToken"] as? String, let videosJson = resultsDict["items"] as? [[String : Any]] else {
                     self.delegate?.didFailGetSearchResultWithError(error: error)
                     return
                 }
@@ -50,7 +56,7 @@ class SearchViewModel {
                     }
                 }
                 
-                self.delegate?.didReceiveSearchResult(videos: videos)
+                self.delegate?.didReceiveSearchResult(videos: videos, nextPageToken: nextPageToken)
             } else {
                 self.delegate?.didFailGetSearchResultWithError(error: error)
             }

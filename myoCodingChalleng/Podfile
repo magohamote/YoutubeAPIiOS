@@ -6,7 +6,7 @@ target 'YoutubeAPIApp' do
   use_frameworks!
 
   # Pods for YoutubeAPIApp
-  pod 'ModernSearchBar'
+  pod 'SDWebImage'
   
   target 'YoutubeAPIAppTests' do
     inherit! :search_paths

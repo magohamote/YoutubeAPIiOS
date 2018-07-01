@@ -1,16 +1,18 @@
 PODS:
-  - ModernSearchBar (1.5)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
 
 DEPENDENCIES:
-  - ModernSearchBar
+  - SDWebImage
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - ModernSearchBar
+    - SDWebImage
 
 SPEC CHECKSUMS:
-  ModernSearchBar: 5dd19c94b1e04f1f83dd9b9950d05153ef2535e5
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
 
-PODFILE CHECKSUM: 3b4f1420ed98f3588843c7c25ce4275b71a7efe7
+PODFILE CHECKSUM: 418d216cf3a39d57a545f0feffe6cdb2623c5c3d
 
 COCOAPODS: 1.5.3

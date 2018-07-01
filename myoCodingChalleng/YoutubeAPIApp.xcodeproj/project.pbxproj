@@ -23,6 +23,8 @@
 		82B24B9D20E9188300110901 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24B9C20E9188300110901 /* Video.swift */; };
 		82B24B9F20E9275E00110901 /* Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24B9E20E9275E00110901 /* Snippet.swift */; };
 		82B24BA120E9279200110901 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24BA020E9279200110901 /* Thumbnail.swift */; };
+		82B24BA420E93B2000110901 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24BA320E93B2000110901 /* VideoCell.swift */; };
+		82B24BA720E93B5A00110901 /* UIViewController+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		82B24B9C20E9188300110901 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		82B24B9E20E9275E00110901 /* Snippet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snippet.swift; sourceTree = "<group>"; };
 		82B24BA020E9279200110901 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
+		82B24BA320E93B2000110901 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Identifier.swift"; sourceTree = "<group>"; };
 		832736428F3607826F2954AC /* Pods_YoutubeAPIApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeAPIApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0A020EE51C5E864325467 /* Pods-YoutubeAPIAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeAPIAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeAPIAppTests/Pods-YoutubeAPIAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE09B5305E42794EB5422DE7 /* Pods-YoutubeAPIApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeAPIApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeAPIApp/Pods-YoutubeAPIApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,9 +154,11 @@
 			isa = PBXGroup;
 			children = (
 				8245304C20E8F9C500771152 /* AppDelegate.swift */,
+				82B24BA520E93B3E00110901 /* Extensions */,
 				82B24B9220E8FDAD00110901 /* Service */,
 				82B24B9820E9186000110901 /* Models */,
 				82B24B9720E9185800110901 /* ViewModels */,
+				82B24BA220E93B0F00110901 /* Views */,
 				8245307A20E8F9CF00771152 /* View Controllers */,
 				8245307C20E8F9DA00771152 /* User Interfaces */,
 				8245307D20E8F9ED00771152 /* Resources */,
@@ -237,6 +243,22 @@
 				82B24BA020E9279200110901 /* Thumbnail.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		82B24BA220E93B0F00110901 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				82B24BA320E93B2000110901 /* VideoCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		82B24BA520E93B3E00110901 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -413,11 +435,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeAPIApp/Pods-YoutubeAPIApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ModernSearchBar/ModernSearchBar.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ModernSearchBar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -451,8 +473,10 @@
 			files = (
 				8245304F20E8F9C500771152 /* ViewController.swift in Sources */,
 				82B24B9F20E9275E00110901 /* Snippet.swift in Sources */,
+				82B24BA420E93B2000110901 /* VideoCell.swift in Sources */,
 				82B24B9D20E9188300110901 /* Video.swift in Sources */,
 				8245304D20E8F9C500771152 /* AppDelegate.swift in Sources */,
+				82B24BA720E93B5A00110901 /* UIViewController+Identifier.swift in Sources */,
 				82B24B9420E8FDBA00110901 /* Service.swift in Sources */,
 				82B24B9B20E9187C00110901 /* SearchViewModel.swift in Sources */,
 				82B24BA120E9279200110901 /* Thumbnail.swift in Sources */,
