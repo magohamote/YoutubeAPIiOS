@@ -25,6 +25,9 @@
 		82B24BA120E9279200110901 /* Thumbnail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24BA020E9279200110901 /* Thumbnail.swift */; };
 		82B24BA420E93B2000110901 /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24BA320E93B2000110901 /* VideoCell.swift */; };
 		82B24BA720E93B5A00110901 /* UIViewController+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */; };
+		82D9554620E97B6000EEF8BC /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9554520E97B6000EEF8BC /* PlayerViewController.swift */; };
+		82D9554A20E980A200EEF8BC /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D9554920E980A200EEF8BC /* YTPlayerView.m */; };
+		82D9554E20E9832800EEF8BC /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 82D9554D20E9832700EEF8BC /* Assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,11 @@
 		82B24BA020E9279200110901 /* Thumbnail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnail.swift; sourceTree = "<group>"; };
 		82B24BA320E93B2000110901 /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
 		82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Identifier.swift"; sourceTree = "<group>"; };
+		82D9554520E97B6000EEF8BC /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		82D9554720E980A000EEF8BC /* YoutubeAPIApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YoutubeAPIApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		82D9554820E980A100EEF8BC /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
+		82D9554920E980A200EEF8BC /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		82D9554D20E9832700EEF8BC /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		832736428F3607826F2954AC /* Pods_YoutubeAPIApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeAPIApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0A020EE51C5E864325467 /* Pods-YoutubeAPIAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeAPIAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeAPIAppTests/Pods-YoutubeAPIAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE09B5305E42794EB5422DE7 /* Pods-YoutubeAPIApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeAPIApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeAPIApp/Pods-YoutubeAPIApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				8245304B20E8F9C500771152 /* myoCodingChalleng */,
+				82D9554D20E9832700EEF8BC /* Assets */,
 				8245306020E8F9C600771152 /* myoCodingChallengTests */,
 				8245306B20E8F9C600771152 /* myoCodingChallengUITests */,
 				8245304A20E8F9C500771152 /* Products */,
@@ -189,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				8245304E20E8F9C500771152 /* ViewController.swift */,
+				82D9554520E97B6000EEF8BC /* PlayerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -214,6 +224,9 @@
 			isa = PBXGroup;
 			children = (
 				82B24B9520E8FFC700110901 /* Constants.swift */,
+				82D9554720E980A000EEF8BC /* YoutubeAPIApp-Bridging-Header.h */,
+				82D9554820E980A100EEF8BC /* YTPlayerView.h */,
+				82D9554920E980A200EEF8BC /* YTPlayerView.m */,
 				8245305820E8F9C600771152 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -333,6 +346,7 @@
 				TargetAttributes = {
 					8245304820E8F9C500771152 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					8245305C20E8F9C600771152 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -369,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D9554E20E9832800EEF8BC /* Assets in Resources */,
 				8245305720E8F9C600771152 /* LaunchScreen.storyboard in Resources */,
 				8245305420E8F9C600771152 /* Assets.xcassets in Resources */,
 				8245305220E8F9C500771152 /* Main.storyboard in Resources */,
@@ -473,6 +488,7 @@
 			files = (
 				8245304F20E8F9C500771152 /* ViewController.swift in Sources */,
 				82B24B9F20E9275E00110901 /* Snippet.swift in Sources */,
+				82D9554A20E980A200EEF8BC /* YTPlayerView.m in Sources */,
 				82B24BA420E93B2000110901 /* VideoCell.swift in Sources */,
 				82B24B9D20E9188300110901 /* Video.swift in Sources */,
 				8245304D20E8F9C500771152 /* AppDelegate.swift in Sources */,
@@ -480,6 +496,7 @@
 				82B24B9420E8FDBA00110901 /* Service.swift in Sources */,
 				82B24B9B20E9187C00110901 /* SearchViewModel.swift in Sources */,
 				82B24BA120E9279200110901 /* Thumbnail.swift in Sources */,
+				82D9554620E97B6000EEF8BC /* PlayerViewController.swift in Sources */,
 				82B24B9620E8FFC700110901 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +671,7 @@
 			baseConfigurationReference = AE09B5305E42794EB5422DE7 /* Pods-YoutubeAPIApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 847P2LXN5F;
 				INFOPLIST_FILE = myoCodingChalleng/Info.plist;
@@ -663,6 +681,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.myo.coding-challenge.YoutubeAPIApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "myoCodingChalleng/YoutubeAPIApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -673,6 +693,7 @@
 			baseConfigurationReference = E6CA661E9775C7D1E4529CE5 /* Pods-YoutubeAPIApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 847P2LXN5F;
 				INFOPLIST_FILE = myoCodingChalleng/Info.plist;
@@ -682,6 +703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.myo.coding-challenge.YoutubeAPIApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "myoCodingChalleng/YoutubeAPIApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

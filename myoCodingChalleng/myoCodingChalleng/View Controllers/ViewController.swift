@@ -13,10 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    var nextPageToken: String?
-    var searchTerms: String?
-    
-    let dataSource = SearchViewModel()
+    private var nextPageToken: String?
+    private var searchTerms: String?
+
+    private let dataSource = SearchViewModel()
     internal var videosArray = [Video]() {
         didSet {
             tableView?.reloadData()
@@ -60,6 +60,13 @@ extension ViewController: UITableViewDelegate {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: PlayerViewController.identifier) as? PlayerViewController {
+            vc.videoId = videosArray[indexPath.row].id
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -88,3 +95,4 @@ extension ViewController: SearchViewModelDelegate {
         print(error)
     }
 }
+
