@@ -11,7 +11,7 @@
 		12847D46F328DD816856574A /* Pods_YoutubeAPIAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CD92253503B180A7AA3414 /* Pods_YoutubeAPIAppUITests.framework */; };
 		3BE60AFD50CF79169B9002AE /* Pods_YoutubeAPIAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5A85C09B96C711F41C9503 /* Pods_YoutubeAPIAppTests.framework */; };
 		8245304D20E8F9C500771152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245304C20E8F9C500771152 /* AppDelegate.swift */; };
-		8245304F20E8F9C500771152 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245304E20E8F9C500771152 /* ViewController.swift */; };
+		8245304F20E8F9C500771152 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245304E20E8F9C500771152 /* SearchViewController.swift */; };
 		8245305220E8F9C500771152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8245305020E8F9C500771152 /* Main.storyboard */; };
 		8245305420E8F9C600771152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8245305320E8F9C600771152 /* Assets.xcassets */; };
 		8245305720E8F9C600771152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8245305520E8F9C600771152 /* LaunchScreen.storyboard */; };
@@ -28,6 +28,7 @@
 		82D9554620E97B6000EEF8BC /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9554520E97B6000EEF8BC /* PlayerViewController.swift */; };
 		82D9554A20E980A200EEF8BC /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82D9554920E980A200EEF8BC /* YTPlayerView.m */; };
 		82D9554E20E9832800EEF8BC /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 82D9554D20E9832700EEF8BC /* Assets */; };
+		82E2271720EAC0200044EBBE /* UIViewController+Show+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E2271620EAC0200044EBBE /* UIViewController+Show+Hide.swift */; };
 		82F9682B20EA551500FF0A31 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9682A20EA551500FF0A31 /* Comment.swift */; };
 		82F9682D20EA57D600FF0A31 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9682C20EA57D600FF0A31 /* CommentCell.swift */; };
 		82F9682F20EA580400FF0A31 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9682E20EA580400FF0A31 /* CommentViewModel.swift */; };
@@ -55,7 +56,7 @@
 		14DFF09B8BD0F4EEBE653142 /* Pods-YoutubeAPIAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeAPIAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeAPIAppTests/Pods-YoutubeAPIAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		8245304920E8F9C500771152 /* YoutubeAPIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YoutubeAPIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8245304C20E8F9C500771152 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8245304E20E8F9C500771152 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8245304E20E8F9C500771152 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8245305120E8F9C500771152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8245305320E8F9C600771152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8245305620E8F9C600771152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +80,7 @@
 		82D9554820E980A100EEF8BC /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		82D9554920E980A200EEF8BC /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		82D9554D20E9832700EEF8BC /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		82E2271620EAC0200044EBBE /* UIViewController+Show+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Show+Hide.swift"; sourceTree = "<group>"; };
 		82F9682A20EA551500FF0A31 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		82F9682C20EA57D600FF0A31 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		82F9682E20EA580400FF0A31 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
@@ -205,7 +207,7 @@
 		8245307A20E8F9CF00771152 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8245304E20E8F9C500771152 /* ViewController.swift */,
+				8245304E20E8F9C500771152 /* SearchViewController.swift */,
 				82D9554520E97B6000EEF8BC /* PlayerViewController.swift */,
 			);
 			path = "View Controllers";
@@ -282,6 +284,7 @@
 			children = (
 				82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */,
 				82F9683020EA7F9E00FF0A31 /* String+Height.swift */,
+				82E2271620EAC0200044EBBE /* UIViewController+Show+Hide.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -498,7 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8245304F20E8F9C500771152 /* ViewController.swift in Sources */,
+				8245304F20E8F9C500771152 /* SearchViewController.swift in Sources */,
 				82B24B9F20E9275E00110901 /* Snippet.swift in Sources */,
 				82D9554A20E980A200EEF8BC /* YTPlayerView.m in Sources */,
 				82F9682F20EA580400FF0A31 /* CommentViewModel.swift in Sources */,
@@ -509,6 +512,7 @@
 				82B24B9420E8FDBA00110901 /* Service.swift in Sources */,
 				82F9683120EA7F9E00FF0A31 /* String+Height.swift in Sources */,
 				82B24B9B20E9187C00110901 /* SearchViewModel.swift in Sources */,
+				82E2271720EAC0200044EBBE /* UIViewController+Show+Hide.swift in Sources */,
 				82B24BA120E9279200110901 /* Thumbnail.swift in Sources */,
 				82F9682B20EA551500FF0A31 /* Comment.swift in Sources */,
 				82D9554620E97B6000EEF8BC /* PlayerViewController.swift in Sources */,

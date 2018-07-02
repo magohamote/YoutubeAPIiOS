@@ -23,7 +23,7 @@ class SearchViewModel {
         
         var urlString = ""
         
-        if let token = nextPageToken {
+        if let token = nextPageToken, token.count > 0 {
             urlString = "\(URLs.baseURL)\(URLs.searchedObject)pageToken=\(token)&q=\(searchTerms)\(URLs.searchType)&key=\(Keys.apiKey)"
         } else {
             urlString = "\(URLs.baseURL)\(URLs.searchedObject)q=\(searchTerms)\(URLs.searchType)&key=\(Keys.apiKey)"
@@ -43,9 +43,14 @@ class SearchViewModel {
                     self.delegate?.didFailGetSearchResultWithError(error: error)
                 }
                 
-                guard let resultsDict = _resultsDict, let nextPageToken = resultsDict["nextPageToken"] as? String, let videosJson = resultsDict["items"] as? [[String : Any]] else {
+                guard let resultsDict = _resultsDict, let videosJson = resultsDict["items"] as? [[String : Any]] else {
                     self.delegate?.didFailGetSearchResultWithError(error: error)
                     return
+                }
+                
+                var nextPageToken = ""
+                if let nextPageTokenString = resultsDict["nextPageToken"] as? String {
+                    nextPageToken = nextPageTokenString
                 }
                 
                 var videosArray = [Video]()

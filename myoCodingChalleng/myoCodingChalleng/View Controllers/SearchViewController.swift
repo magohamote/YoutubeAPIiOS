@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  myoCodingChalleng
 //
 //  Created by Cédric Rolland on 01.07.18.
@@ -8,16 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
+    private let dataSource = SearchViewModel()
+    
     private var nextPageToken: String?
     private var searchTerms: String?
-
-    private let dataSource = SearchViewModel()
-    internal var videosArray = [Video]() {
+    private var tap: UITapGestureRecognizer?
+    private var videosArray = [Video]() {
         didSet {
             tableView?.reloadData()
         }
@@ -26,6 +27,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Youtube API app"
+            
         nextPageToken = ""
         searchTerms = ""
         
@@ -33,28 +36,43 @@ class ViewController: UIViewController {
         dataSource.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-    }
-}
-
-extension ViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let text = searchBar.text {
-            searchTerms = text
-            videosArray.removeAll()
-            dataSource.search(withSearchTerms: text)
+        
+        tap = UITapGestureRecognizer(target: self, action: #selector(SearchViewController.dismissKeyboard(_:)))
+        if let tap = self.tap {
+            view.addGestureRecognizer(tap)
         }
     }
     
-    func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
+    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        searchBar.endEditing(true)
+        tap?.isEnabled = false
+    }
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        tap?.isEnabled = true
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
             searchTerms = text
+            
             videosArray.removeAll()
-            dataSource.search(withSearchTerms: text)
+            
+            dataSource.search(withSearchTerms: text.trimmingCharacters(in: .whitespacesAndNewlines))
+            
+            showLoadingView(onView: view)
+            
+            self.searchBar.endEditing(true)
+            
+            tap?.isEnabled = false
         }
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension SearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == videosArray.count - 5 {
             if let searchTerms = self.searchTerms {
@@ -66,12 +84,14 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: PlayerViewController.identifier) as? PlayerViewController {
             vc.videoId = videosArray[indexPath.row].id
+            vc.title = videosArray[indexPath.row].snippet.title
             self.navigationController?.pushViewController(vc, animated: true)
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videosArray.count
     }
@@ -85,16 +105,26 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: SearchViewModelDelegate {
+extension SearchViewController: SearchViewModelDelegate {
     func didReceiveSearchResult(videos: [Video]?, nextPageToken: String) {
+        hideLoadingView(tableView: tableView)
         if let videos = videos {
-            self.videosArray.append(contentsOf: videos)
+            if videos.count == 0 {
+                showMessage(withTitle: "No video", withMessage: "Sorry, we didn't find any video.")
+            } else {
+                self.videosArray.append(contentsOf: videos)
+            }
         }
         self.nextPageToken = nextPageToken
     }
     
     func didFailGetSearchResultWithError(error: Error?) {
-        print(error)
+        hideLoadingView(tableView: tableView)
+        if let error = error {
+            showMessage(withTitle: "Error", withMessage: error.localizedDescription)
+        } else {
+            showMessage(withTitle: "Error", withMessage: "An unknown error occured")
+        }
     }
 }
 

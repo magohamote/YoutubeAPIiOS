@@ -31,7 +31,10 @@ class PlayerViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.separatorColor = .clear
+        
         if let videoId = self.videoId {
+            showLoadingView(onView: playerView)
             playerView.load(withVideoId: videoId)
             dataSource.getComments(forVideo: videoId)
         }
@@ -62,10 +65,18 @@ extension PlayerViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let commentWidth: CGFloat = view.frame.width - 3*15 - 67.5
-        let commentHeight = commentsArray[indexPath.row].textDisplay.height(withConstrainedWidth: commentWidth, font: UIFont.systemFont(ofSize: 19))
+        let margin:CGFloat = 15
+        let avatarSize:CGFloat = 67.5
+        let commentWidth: CGFloat = view.frame.width - 3 * margin - avatarSize
+        let commentHeight = commentsArray[indexPath.row].textDisplay.height(withConstrainedWidth: commentWidth, font: UIFont.systemFont(ofSize: 17))
         
-        return commentHeight + 2*15 + 10 + 21
+        let totalHeight = commentHeight + 2 * margin + 10 + 21
+        
+        if totalHeight < 98 {
+            return 98
+        } else {
+            return totalHeight
+        }
     }
 }
 
@@ -75,9 +86,10 @@ extension PlayerViewController: CommentViewModelDelegate {
             self.commentsArray.append(contentsOf: comments)
         }
         self.nextPageToken = nextPageToken
+        tableView.separatorColor = .lightGray
     }
     
     func didFailGetCommentsWithError(error: Error?) {
-        print(error)
+        tableView.alpha = 0
     }
 }

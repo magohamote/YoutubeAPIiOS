@@ -23,7 +23,7 @@ class CommentViewModel {
         
         var urlString = ""
         
-        if let token = nextPageToken {
+        if let token = nextPageToken, token.count > 0 {
             urlString = "\(URLs.baseURL)\(URLs.commentObject)pageToken=\(token)&videoId=\(videoId)\(URLs.commentType)&key=\(Keys.apiKey)"
         } else {
             urlString = "\(URLs.baseURL)\(URLs.commentObject)videoId=\(videoId)\(URLs.commentType)&key=\(Keys.apiKey)"
@@ -43,9 +43,14 @@ class CommentViewModel {
                     self.delegate?.didFailGetCommentsWithError(error: error)
                 }
                 
-                guard let resultsDict = _resultsDict, let nextPageToken = resultsDict["nextPageToken"] as? String, let commentsJson = resultsDict["items"] as? [[String : Any]] else {
+                guard let resultsDict = _resultsDict, let commentsJson = resultsDict["items"] as? [[String : Any]] else {
                     self.delegate?.didFailGetCommentsWithError(error: error)
                     return
+                }
+                
+                var nextPageToken = ""
+                if let nextPageTokenString = resultsDict["nextPageToken"] as? String {
+                    nextPageToken = nextPageTokenString
                 }
                 
                 var commentsArray = [Comment]()
