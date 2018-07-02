@@ -48,15 +48,15 @@ class SearchViewModel {
                     return
                 }
                 
-                var videos = [Video]()
+                var videosArray = [Video]()
                 
                 for videoJson in videosJson {
                     if let video = Video.init(withJson: videoJson) {
-                        videos.append(video)
+                        videosArray.append(video)
                     }
                 }
                 
-                self.delegate?.didReceiveSearchResult(videos: videos, nextPageToken: nextPageToken)
+                self.delegate?.didReceiveSearchResult(videos: videosArray, nextPageToken: nextPageToken)
             } else {
                 self.delegate?.didFailGetSearchResultWithError(error: error)
             }

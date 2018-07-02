@@ -15,5 +15,9 @@ struct Keys {
 struct URLs {
     static let baseURL = "https://www.googleapis.com/youtube/v3/"
     static let searchedObject = "search?"
+    static let commentObject = "commentThreads?"
     static let searchType =  "&type=video&part=snippet"
+    static let commentType = "&textFormat=plainText&part=snippet&maxResults=50"
 }
+
+
