@@ -60,6 +60,13 @@ extension PlayerViewController: UITableViewDelegate {
             }
         }
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let commentWidth: CGFloat = view.frame.width - 3*15 - 67.5
+        let commentHeight = commentsArray[indexPath.row].textDisplay.height(withConstrainedWidth: commentWidth, font: UIFont.systemFont(ofSize: 19))
+        
+        return commentHeight + 2*15 + 10 + 21
+    }
 }
 
 extension PlayerViewController: CommentViewModelDelegate {

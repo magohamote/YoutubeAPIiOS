@@ -40,6 +40,7 @@ extension ViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
             searchTerms = text
+            videosArray.removeAll()
             dataSource.search(withSearchTerms: text)
         }
     }
@@ -47,6 +48,7 @@ extension ViewController: UISearchBarDelegate {
     func searchBarResultsListButtonClicked(_ searchBar: UISearchBar) {
         if let text = searchBar.text {
             searchTerms = text
+            videosArray.removeAll()
             dataSource.search(withSearchTerms: text)
         }
     }
