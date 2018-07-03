@@ -1,14 +1,14 @@
 //
-//  myoCodingChallengUITests.swift
-//  myoCodingChallengUITests
+//  YoutubeAPIAppUITest.swift
+//  YoutubeAPIAppUITest
 //
-//  Created by Cédric Rolland on 01.07.18.
+//  Created by Cédric Rolland on 03.07.18.
 //  Copyright © 2018 Cédric Rolland. All rights reserved.
 //
 
 import XCTest
 
-class myoCodingChallengUITests: XCTestCase {
+class YoutubeAPIAppUITest: XCTestCase {
         
     override func setUp() {
         super.setUp()

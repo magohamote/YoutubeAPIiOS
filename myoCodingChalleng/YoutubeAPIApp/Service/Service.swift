@@ -20,11 +20,7 @@ class Service {
         
         let task = session.dataTask(with: request) { (data, response, error) in
             DispatchQueue.main.async {
-                if let response = response {
-                    completion(data, response, error)
-                } else {
-                    completion(nil, nil, error)
-                }
+                completion(data, response, error)
             }
         }
         

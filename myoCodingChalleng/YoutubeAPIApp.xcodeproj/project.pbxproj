@@ -8,15 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0519693BDF5DB091B71CBCB3 /* Pods_YoutubeAPIApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 832736428F3607826F2954AC /* Pods_YoutubeAPIApp.framework */; };
-		12847D46F328DD816856574A /* Pods_YoutubeAPIAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CD92253503B180A7AA3414 /* Pods_YoutubeAPIAppUITests.framework */; };
-		3BE60AFD50CF79169B9002AE /* Pods_YoutubeAPIAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD5A85C09B96C711F41C9503 /* Pods_YoutubeAPIAppTests.framework */; };
 		8245304D20E8F9C500771152 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245304C20E8F9C500771152 /* AppDelegate.swift */; };
 		8245304F20E8F9C500771152 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245304E20E8F9C500771152 /* SearchViewController.swift */; };
 		8245305220E8F9C500771152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8245305020E8F9C500771152 /* Main.storyboard */; };
 		8245305420E8F9C600771152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8245305320E8F9C600771152 /* Assets.xcassets */; };
 		8245305720E8F9C600771152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8245305520E8F9C600771152 /* LaunchScreen.storyboard */; };
-		8245306220E8F9C600771152 /* myoCodingChallengTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245306120E8F9C600771152 /* myoCodingChallengTests.swift */; };
-		8245306D20E8F9C600771152 /* myoCodingChallengUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8245306C20E8F9C600771152 /* myoCodingChallengUITests.swift */; };
 		82B24B9420E8FDBA00110901 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24B9320E8FDBA00110901 /* Service.swift */; };
 		82B24B9620E8FFC700110901 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24B9520E8FFC700110901 /* Constants.swift */; };
 		82B24B9B20E9187C00110901 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24B9A20E9187C00110901 /* SearchViewModel.swift */; };
@@ -33,22 +29,38 @@
 		82F9682D20EA57D600FF0A31 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9682C20EA57D600FF0A31 /* CommentCell.swift */; };
 		82F9682F20EA580400FF0A31 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9682E20EA580400FF0A31 /* CommentViewModel.swift */; };
 		82F9683120EA7F9E00FF0A31 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9683020EA7F9E00FF0A31 /* String+Height.swift */; };
+		82F9684720EB817500FF0A31 /* YoutubeAPIAppUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9684620EB817500FF0A31 /* YoutubeAPIAppUITest.swift */; };
+		82F9684F20EB86AF00FF0A31 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9684E20EB86AF00FF0A31 /* MockRequest.swift */; };
+		82F9685120EB86CE00FF0A31 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9685020EB86CE00FF0A31 /* MockService.swift */; };
+		82F9687220EB8D2700FF0A31 /* bad_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F9687120EB8D2700FF0A31 /* bad_list.json */; };
+		82F9687620EB8D3B00FF0A31 /* bad_json.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F9687420EB8D3B00FF0A31 /* bad_json.json */; };
+		82F9687A20EB8DBB00FF0A31 /* comment_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F9687920EB8DBB00FF0A31 /* comment_list.json */; };
+		82F9687C20EB8E7E00FF0A31 /* TestModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9687B20EB8E7E00FF0A31 /* TestModels.swift */; };
+		82F9687F20EB8ED600FF0A31 /* XCTestCase+GetTestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9687E20EB8ED600FF0A31 /* XCTestCase+GetTestData.swift */; };
+		82F9688220EB92CC00FF0A31 /* video_list.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F9688120EB92CC00FF0A31 /* video_list.json */; };
+		82F9688420EB937C00FF0A31 /* thumbnail.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F9688320EB937C00FF0A31 /* thumbnail.json */; };
+		82F9688620EB938500FF0A31 /* bad_thumbnail.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F9688520EB938500FF0A31 /* bad_thumbnail.json */; };
+		82F9688820EB939100FF0A31 /* snippet.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F9688720EB939100FF0A31 /* snippet.json */; };
+		82F9688A20EB939800FF0A31 /* bad_snippet.json in Resources */ = {isa = PBXBuildFile; fileRef = 82F9688920EB939800FF0A31 /* bad_snippet.json */; };
+		82F9688C20EB97B400FF0A31 /* TestViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9688B20EB97B400FF0A31 /* TestViewModels.swift */; };
+		82F9688F20EBA5A900FF0A31 /* TestFailingViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9688E20EBA5A900FF0A31 /* TestFailingViewModels.swift */; };
+		82F9689220EBA69600FF0A31 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9689120EBA69600FF0A31 /* Error.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8245305E20E8F9C600771152 /* PBXContainerItemProxy */ = {
+		82F9683B20EB816700FF0A31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8245304120E8F9C500771152 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8245304820E8F9C500771152;
-			remoteInfo = myoCodingChalleng;
+			remoteInfo = YoutubeAPIApp;
 		};
-		8245306920E8F9C600771152 /* PBXContainerItemProxy */ = {
+		82F9684920EB817500FF0A31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8245304120E8F9C500771152 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8245304820E8F9C500771152;
-			remoteInfo = myoCodingChalleng;
+			remoteInfo = YoutubeAPIApp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,12 +73,6 @@
 		8245305320E8F9C600771152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8245305620E8F9C600771152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8245305820E8F9C600771152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8245305D20E8F9C600771152 /* YoutubeAPIAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeAPIAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8245306120E8F9C600771152 /* myoCodingChallengTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myoCodingChallengTests.swift; sourceTree = "<group>"; };
-		8245306320E8F9C600771152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8245306820E8F9C600771152 /* YoutubeAPIAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeAPIAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8245306C20E8F9C600771152 /* myoCodingChallengUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myoCodingChallengUITests.swift; sourceTree = "<group>"; };
-		8245306E20E8F9C600771152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82B24B9320E8FDBA00110901 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		82B24B9520E8FFC700110901 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		82B24B9A20E9187C00110901 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -85,6 +91,26 @@
 		82F9682C20EA57D600FF0A31 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		82F9682E20EA580400FF0A31 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		82F9683020EA7F9E00FF0A31 /* String+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
+		82F9683620EB816700FF0A31 /* YoutubeAPIAppUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeAPIAppUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82F9683A20EB816700FF0A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82F9684420EB817500FF0A31 /* YoutubeAPIAppUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeAPIAppUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82F9684620EB817500FF0A31 /* YoutubeAPIAppUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeAPIAppUITest.swift; sourceTree = "<group>"; };
+		82F9684820EB817500FF0A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82F9684E20EB86AF00FF0A31 /* MockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRequest.swift; sourceTree = "<group>"; };
+		82F9685020EB86CE00FF0A31 /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		82F9687120EB8D2700FF0A31 /* bad_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bad_list.json; sourceTree = "<group>"; };
+		82F9687420EB8D3B00FF0A31 /* bad_json.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bad_json.json; sourceTree = "<group>"; };
+		82F9687920EB8DBB00FF0A31 /* comment_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comment_list.json; sourceTree = "<group>"; };
+		82F9687B20EB8E7E00FF0A31 /* TestModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModels.swift; sourceTree = "<group>"; };
+		82F9687E20EB8ED600FF0A31 /* XCTestCase+GetTestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+GetTestData.swift"; sourceTree = "<group>"; };
+		82F9688120EB92CC00FF0A31 /* video_list.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = video_list.json; sourceTree = "<group>"; };
+		82F9688320EB937C00FF0A31 /* thumbnail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = thumbnail.json; sourceTree = "<group>"; };
+		82F9688520EB938500FF0A31 /* bad_thumbnail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bad_thumbnail.json; sourceTree = "<group>"; };
+		82F9688720EB939100FF0A31 /* snippet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = snippet.json; sourceTree = "<group>"; };
+		82F9688920EB939800FF0A31 /* bad_snippet.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bad_snippet.json; sourceTree = "<group>"; };
+		82F9688B20EB97B400FF0A31 /* TestViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewModels.swift; sourceTree = "<group>"; };
+		82F9688E20EBA5A900FF0A31 /* TestFailingViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFailingViewModels.swift; sourceTree = "<group>"; };
+		82F9689120EBA69600FF0A31 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		832736428F3607826F2954AC /* Pods_YoutubeAPIApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeAPIApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C0A020EE51C5E864325467 /* Pods-YoutubeAPIAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeAPIAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeAPIAppTests/Pods-YoutubeAPIAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AE09B5305E42794EB5422DE7 /* Pods-YoutubeAPIApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YoutubeAPIApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YoutubeAPIApp/Pods-YoutubeAPIApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,19 +130,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8245305A20E8F9C600771152 /* Frameworks */ = {
+		82F9683320EB816700FF0A31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BE60AFD50CF79169B9002AE /* Pods_YoutubeAPIAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8245306520E8F9C600771152 /* Frameworks */ = {
+		82F9684120EB817500FF0A31 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12847D46F328DD816856574A /* Pods_YoutubeAPIAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,10 +173,10 @@
 		8245304020E8F9C500771152 = {
 			isa = PBXGroup;
 			children = (
-				8245304B20E8F9C500771152 /* myoCodingChalleng */,
+				8245304B20E8F9C500771152 /* YoutubeAPIApp */,
 				82D9554D20E9832700EEF8BC /* Assets */,
-				8245306020E8F9C600771152 /* myoCodingChallengTests */,
-				8245306B20E8F9C600771152 /* myoCodingChallengUITests */,
+				82F9683720EB816700FF0A31 /* YoutubeAPIAppUnitTest */,
+				82F9684520EB817500FF0A31 /* YoutubeAPIAppUITest */,
 				8245304A20E8F9C500771152 /* Products */,
 				044083B5E4DB804970CEB4EB /* Pods */,
 				22E6E85812AFA532F161968C /* Frameworks */,
@@ -163,16 +187,17 @@
 			isa = PBXGroup;
 			children = (
 				8245304920E8F9C500771152 /* YoutubeAPIApp.app */,
-				8245305D20E8F9C600771152 /* YoutubeAPIAppTests.xctest */,
-				8245306820E8F9C600771152 /* YoutubeAPIAppUITests.xctest */,
+				82F9683620EB816700FF0A31 /* YoutubeAPIAppUnitTest.xctest */,
+				82F9684420EB817500FF0A31 /* YoutubeAPIAppUITest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8245304B20E8F9C500771152 /* myoCodingChalleng */ = {
+		8245304B20E8F9C500771152 /* YoutubeAPIApp */ = {
 			isa = PBXGroup;
 			children = (
 				8245304C20E8F9C500771152 /* AppDelegate.swift */,
+				82F9689020EBA68D00FF0A31 /* Utils */,
 				82B24BA520E93B3E00110901 /* Extensions */,
 				82B24B9220E8FDAD00110901 /* Service */,
 				82B24B9820E9186000110901 /* Models */,
@@ -183,25 +208,7 @@
 				8245307D20E8F9ED00771152 /* Resources */,
 				8245307E20E8F9F500771152 /* Supporting Files */,
 			);
-			path = myoCodingChalleng;
-			sourceTree = "<group>";
-		};
-		8245306020E8F9C600771152 /* myoCodingChallengTests */ = {
-			isa = PBXGroup;
-			children = (
-				8245306120E8F9C600771152 /* myoCodingChallengTests.swift */,
-				8245306320E8F9C600771152 /* Info.plist */,
-			);
-			path = myoCodingChallengTests;
-			sourceTree = "<group>";
-		};
-		8245306B20E8F9C600771152 /* myoCodingChallengUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8245306C20E8F9C600771152 /* myoCodingChallengUITests.swift */,
-				8245306E20E8F9C600771152 /* Info.plist */,
-			);
-			path = myoCodingChallengUITests;
+			path = YoutubeAPIApp;
 			sourceTree = "<group>";
 		};
 		8245307A20E8F9CF00771152 /* View Controllers */ = {
@@ -289,6 +296,77 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		82F9683720EB816700FF0A31 /* YoutubeAPIAppUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				82F9687B20EB8E7E00FF0A31 /* TestModels.swift */,
+				82F9688B20EB97B400FF0A31 /* TestViewModels.swift */,
+				82F9688E20EBA5A900FF0A31 /* TestFailingViewModels.swift */,
+				82F9684E20EB86AF00FF0A31 /* MockRequest.swift */,
+				82F9685020EB86CE00FF0A31 /* MockService.swift */,
+				82F9683A20EB816700FF0A31 /* Info.plist */,
+				82F9686E20EB8CE500FF0A31 /* Resources */,
+				82F9687D20EB8EC300FF0A31 /* Extension */,
+			);
+			path = YoutubeAPIAppUnitTest;
+			sourceTree = "<group>";
+		};
+		82F9684520EB817500FF0A31 /* YoutubeAPIAppUITest */ = {
+			isa = PBXGroup;
+			children = (
+				82F9684620EB817500FF0A31 /* YoutubeAPIAppUITest.swift */,
+				82F9684820EB817500FF0A31 /* Info.plist */,
+			);
+			path = YoutubeAPIAppUITest;
+			sourceTree = "<group>";
+		};
+		82F9686E20EB8CE500FF0A31 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				82F9687020EB8D1500FF0A31 /* Bad */,
+				82F9686F20EB8CED00FF0A31 /* Good */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		82F9686F20EB8CED00FF0A31 /* Good */ = {
+			isa = PBXGroup;
+			children = (
+				82F9687920EB8DBB00FF0A31 /* comment_list.json */,
+				82F9688120EB92CC00FF0A31 /* video_list.json */,
+				82F9688320EB937C00FF0A31 /* thumbnail.json */,
+				82F9688720EB939100FF0A31 /* snippet.json */,
+			);
+			path = Good;
+			sourceTree = "<group>";
+		};
+		82F9687020EB8D1500FF0A31 /* Bad */ = {
+			isa = PBXGroup;
+			children = (
+				82F9687120EB8D2700FF0A31 /* bad_list.json */,
+				82F9687420EB8D3B00FF0A31 /* bad_json.json */,
+				82F9688520EB938500FF0A31 /* bad_thumbnail.json */,
+				82F9688920EB939800FF0A31 /* bad_snippet.json */,
+			);
+			path = Bad;
+			sourceTree = "<group>";
+		};
+		82F9687D20EB8EC300FF0A31 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				82F9687E20EB8ED600FF0A31 /* XCTestCase+GetTestData.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		82F9689020EBA68D00FF0A31 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				82F9689120EBA69600FF0A31 /* Error.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -311,42 +389,40 @@
 			productReference = 8245304920E8F9C500771152 /* YoutubeAPIApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8245305C20E8F9C600771152 /* YoutubeAPIAppTests */ = {
+		82F9683520EB816700FF0A31 /* YoutubeAPIAppUnitTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8245307420E8F9C600771152 /* Build configuration list for PBXNativeTarget "YoutubeAPIAppTests" */;
+			buildConfigurationList = 82F9683D20EB816700FF0A31 /* Build configuration list for PBXNativeTarget "YoutubeAPIAppUnitTest" */;
 			buildPhases = (
-				743E9CEF73A57E9D1843ED84 /* [CP] Check Pods Manifest.lock */,
-				8245305920E8F9C600771152 /* Sources */,
-				8245305A20E8F9C600771152 /* Frameworks */,
-				8245305B20E8F9C600771152 /* Resources */,
+				82F9683220EB816700FF0A31 /* Sources */,
+				82F9683320EB816700FF0A31 /* Frameworks */,
+				82F9683420EB816700FF0A31 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8245305F20E8F9C600771152 /* PBXTargetDependency */,
+				82F9683C20EB816700FF0A31 /* PBXTargetDependency */,
 			);
-			name = YoutubeAPIAppTests;
-			productName = myoCodingChallengTests;
-			productReference = 8245305D20E8F9C600771152 /* YoutubeAPIAppTests.xctest */;
+			name = YoutubeAPIAppUnitTest;
+			productName = YoutubeAPIAppUnitTest;
+			productReference = 82F9683620EB816700FF0A31 /* YoutubeAPIAppUnitTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		8245306720E8F9C600771152 /* YoutubeAPIAppUITests */ = {
+		82F9684320EB817500FF0A31 /* YoutubeAPIAppUITest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8245307720E8F9C600771152 /* Build configuration list for PBXNativeTarget "YoutubeAPIAppUITests" */;
+			buildConfigurationList = 82F9684B20EB817500FF0A31 /* Build configuration list for PBXNativeTarget "YoutubeAPIAppUITest" */;
 			buildPhases = (
-				D9446B4A0159E28C0EBCB965 /* [CP] Check Pods Manifest.lock */,
-				8245306420E8F9C600771152 /* Sources */,
-				8245306520E8F9C600771152 /* Frameworks */,
-				8245306620E8F9C600771152 /* Resources */,
+				82F9684020EB817500FF0A31 /* Sources */,
+				82F9684120EB817500FF0A31 /* Frameworks */,
+				82F9684220EB817500FF0A31 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8245306A20E8F9C600771152 /* PBXTargetDependency */,
+				82F9684A20EB817500FF0A31 /* PBXTargetDependency */,
 			);
-			name = YoutubeAPIAppUITests;
-			productName = myoCodingChallengUITests;
-			productReference = 8245306820E8F9C600771152 /* YoutubeAPIAppUITests.xctest */;
+			name = YoutubeAPIAppUITest;
+			productName = YoutubeAPIAppUITest;
+			productReference = 82F9684420EB817500FF0A31 /* YoutubeAPIAppUITest.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -363,12 +439,12 @@
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
 					};
-					8245305C20E8F9C600771152 = {
-						CreatedOnToolsVersion = 9.4.1;
+					82F9683520EB816700FF0A31 = {
+						CreatedOnToolsVersion = 9.4;
 						TestTargetID = 8245304820E8F9C500771152;
 					};
-					8245306720E8F9C600771152 = {
-						CreatedOnToolsVersion = 9.4.1;
+					82F9684320EB817500FF0A31 = {
+						CreatedOnToolsVersion = 9.4;
 						TestTargetID = 8245304820E8F9C500771152;
 					};
 				};
@@ -387,8 +463,8 @@
 			projectRoot = "";
 			targets = (
 				8245304820E8F9C500771152 /* YoutubeAPIApp */,
-				8245305C20E8F9C600771152 /* YoutubeAPIAppTests */,
-				8245306720E8F9C600771152 /* YoutubeAPIAppUITests */,
+				82F9683520EB816700FF0A31 /* YoutubeAPIAppUnitTest */,
+				82F9684320EB817500FF0A31 /* YoutubeAPIAppUITest */,
 			);
 		};
 /* End PBXProject section */
@@ -405,14 +481,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8245305B20E8F9C600771152 /* Resources */ = {
+		82F9683420EB816700FF0A31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F9688820EB939100FF0A31 /* snippet.json in Resources */,
+				82F9688A20EB939800FF0A31 /* bad_snippet.json in Resources */,
+				82F9688420EB937C00FF0A31 /* thumbnail.json in Resources */,
+				82F9687620EB8D3B00FF0A31 /* bad_json.json in Resources */,
+				82F9688220EB92CC00FF0A31 /* video_list.json in Resources */,
+				82F9687A20EB8DBB00FF0A31 /* comment_list.json in Resources */,
+				82F9688620EB938500FF0A31 /* bad_thumbnail.json in Resources */,
+				82F9687220EB8D2700FF0A31 /* bad_list.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8245306620E8F9C600771152 /* Resources */ = {
+		82F9684220EB817500FF0A31 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -440,24 +524,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		743E9CEF73A57E9D1843ED84 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YoutubeAPIAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B516995250AB32EB123BF6F7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,24 +540,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YoutubeAPIApp/Pods-YoutubeAPIApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D9446B4A0159E28C0EBCB965 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-YoutubeAPIAppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -517,38 +565,44 @@
 				82F9682B20EA551500FF0A31 /* Comment.swift in Sources */,
 				82D9554620E97B6000EEF8BC /* PlayerViewController.swift in Sources */,
 				82B24B9620E8FFC700110901 /* Constants.swift in Sources */,
+				82F9689220EBA69600FF0A31 /* Error.swift in Sources */,
 				82F9682D20EA57D600FF0A31 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8245305920E8F9C600771152 /* Sources */ = {
+		82F9683220EB816700FF0A31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8245306220E8F9C600771152 /* myoCodingChallengTests.swift in Sources */,
+				82F9688C20EB97B400FF0A31 /* TestViewModels.swift in Sources */,
+				82F9687F20EB8ED600FF0A31 /* XCTestCase+GetTestData.swift in Sources */,
+				82F9684F20EB86AF00FF0A31 /* MockRequest.swift in Sources */,
+				82F9685120EB86CE00FF0A31 /* MockService.swift in Sources */,
+				82F9687C20EB8E7E00FF0A31 /* TestModels.swift in Sources */,
+				82F9688F20EBA5A900FF0A31 /* TestFailingViewModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8245306420E8F9C600771152 /* Sources */ = {
+		82F9684020EB817500FF0A31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8245306D20E8F9C600771152 /* myoCodingChallengUITests.swift in Sources */,
+				82F9684720EB817500FF0A31 /* YoutubeAPIAppUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8245305F20E8F9C600771152 /* PBXTargetDependency */ = {
+		82F9683C20EB816700FF0A31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8245304820E8F9C500771152 /* YoutubeAPIApp */;
-			targetProxy = 8245305E20E8F9C600771152 /* PBXContainerItemProxy */;
+			targetProxy = 82F9683B20EB816700FF0A31 /* PBXContainerItemProxy */;
 		};
-		8245306A20E8F9C600771152 /* PBXTargetDependency */ = {
+		82F9684A20EB817500FF0A31 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8245304820E8F9C500771152 /* YoutubeAPIApp */;
-			targetProxy = 8245306920E8F9C600771152 /* PBXContainerItemProxy */;
+			targetProxy = 82F9684920EB817500FF0A31 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -694,14 +748,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22784KR89K;
-				INFOPLIST_FILE = myoCodingChalleng/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YoutubeAPIApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.myo.coding-challenge.YoutubeAPIApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "myoCodingChalleng/YoutubeAPIApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "YoutubeAPIApp/YoutubeAPIApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -716,34 +770,32 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 22784KR89K;
-				INFOPLIST_FILE = myoCodingChalleng/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/YoutubeAPIApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "de.myo.coding-challenge.YoutubeAPIApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "myoCodingChalleng/YoutubeAPIApp-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "YoutubeAPIApp/YoutubeAPIApp-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		8245307520E8F9C600771152 /* Debug */ = {
+		82F9683E20EB816700FF0A31 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92C0A020EE51C5E864325467 /* Pods-YoutubeAPIAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 847P2LXN5F;
-				INFOPLIST_FILE = myoCodingChallengTests/Info.plist;
+				DEVELOPMENT_TEAM = 4W2YSC7A3U;
+				INFOPLIST_FILE = YoutubeAPIAppUnitTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "de.myo.coding-challenge.myoCodingChallengTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sumup.coding-challenge.YoutubeAPIAppUnitTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,21 +803,19 @@
 			};
 			name = Debug;
 		};
-		8245307620E8F9C600771152 /* Release */ = {
+		82F9683F20EB816700FF0A31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14DFF09B8BD0F4EEBE653142 /* Pods-YoutubeAPIAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 847P2LXN5F;
-				INFOPLIST_FILE = myoCodingChallengTests/Info.plist;
+				DEVELOPMENT_TEAM = 4W2YSC7A3U;
+				INFOPLIST_FILE = YoutubeAPIAppUnitTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "de.myo.coding-challenge.myoCodingChallengTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sumup.coding-challenge.YoutubeAPIAppUnitTest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -773,45 +823,41 @@
 			};
 			name = Release;
 		};
-		8245307820E8F9C600771152 /* Debug */ = {
+		82F9684C20EB817500FF0A31 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2171AF562E02E6E95F8B92A /* Pods-YoutubeAPIAppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 847P2LXN5F;
-				INFOPLIST_FILE = myoCodingChallengUITests/Info.plist;
+				DEVELOPMENT_TEAM = 4W2YSC7A3U;
+				INFOPLIST_FILE = YoutubeAPIAppUITest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "de.myo.coding-challenge.myoCodingChallengUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sumup.coding-challenge.YoutubeAPIAppUITest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = myoCodingChalleng;
+				TEST_TARGET_NAME = YoutubeAPIApp;
 			};
 			name = Debug;
 		};
-		8245307920E8F9C600771152 /* Release */ = {
+		82F9684D20EB817500FF0A31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2443CBAFAC1E8B72BF6CE6B /* Pods-YoutubeAPIAppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 847P2LXN5F;
-				INFOPLIST_FILE = myoCodingChallengUITests/Info.plist;
+				DEVELOPMENT_TEAM = 4W2YSC7A3U;
+				INFOPLIST_FILE = YoutubeAPIAppUITest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "de.myo.coding-challenge.myoCodingChallengUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sumup.coding-challenge.YoutubeAPIAppUITest";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = myoCodingChalleng;
+				TEST_TARGET_NAME = YoutubeAPIApp;
 			};
 			name = Release;
 		};
@@ -836,20 +882,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8245307420E8F9C600771152 /* Build configuration list for PBXNativeTarget "YoutubeAPIAppTests" */ = {
+		82F9683D20EB816700FF0A31 /* Build configuration list for PBXNativeTarget "YoutubeAPIAppUnitTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8245307520E8F9C600771152 /* Debug */,
-				8245307620E8F9C600771152 /* Release */,
+				82F9683E20EB816700FF0A31 /* Debug */,
+				82F9683F20EB816700FF0A31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8245307720E8F9C600771152 /* Build configuration list for PBXNativeTarget "YoutubeAPIAppUITests" */ = {
+		82F9684B20EB817500FF0A31 /* Build configuration list for PBXNativeTarget "YoutubeAPIAppUITest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8245307820E8F9C600771152 /* Debug */,
-				8245307920E8F9C600771152 /* Release */,
+				82F9684C20EB817500FF0A31 /* Debug */,
+				82F9684D20EB817500FF0A31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

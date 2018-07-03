@@ -50,14 +50,4 @@ extension UIViewController {
             loadingView?.removeFromSuperview()
         })
     }
-    
-    func hideLoadingView(fromView view: UIView) {
-        let loadingView = view.viewWithTag(42)
-        
-        UIView.animate(withDuration: 0.25, animations: {
-            loadingView?.alpha = 0
-        }, completion: { _ in
-            loadingView?.removeFromSuperview()
-        })
-    }
 }
