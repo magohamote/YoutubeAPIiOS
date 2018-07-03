@@ -21,7 +21,14 @@ class SearchViewModel {
     
     func search(withSearchTerms searchTerms: String, nextPageToken: String? = nil) {
         
-        var urlString = "\(URLs.baseURL)\(URLs.searchedObject)q=\(searchTerms)\(URLs.searchType)&key=\(Keys.apiKey)"
+        let _searchFormatted = searchTerms.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        
+        guard let searchFormatted = _searchFormatted else {
+            self.delegate?.didFailGetSearchResultWithError(error: FormatError.badFormatError)
+            return
+        }
+        
+        var urlString = "\(URLs.baseURL)\(URLs.searchedObject)q=\(searchFormatted)\(URLs.searchType)&key=\(Keys.apiKey)"
         
         if let token = nextPageToken, token.count > 0 {
             urlString = "\(urlString)&pageToken=\(token)"
@@ -29,6 +36,8 @@ class SearchViewModel {
         
         if let targetURL = URL(string: urlString) {
             service.performGetRequest(targetURL: targetURL, completion: setVideo)
+        } else {
+            self.delegate?.didFailGetSearchResultWithError(error: QueryError.noResponseError)
         }
     }
     

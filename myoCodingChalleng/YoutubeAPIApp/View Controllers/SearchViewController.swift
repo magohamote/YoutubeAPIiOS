@@ -61,9 +61,9 @@ extension SearchViewController: UISearchBarDelegate {
             
             videosArray.removeAll()
             
-            dataSource.search(withSearchTerms: text.trimmingCharacters(in: .whitespacesAndNewlines))
-            
             showLoadingView(onView: view)
+            
+            dataSource.search(withSearchTerms: text.trimmingCharacters(in: .whitespacesAndNewlines))
             
             self.searchBar.endEditing(true)
             

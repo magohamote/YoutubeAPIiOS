@@ -34,7 +34,6 @@ class PlayerViewController: UIViewController {
         tableView.separatorColor = .clear
         
         if let videoId = self.videoId {
-            showLoadingView(onView: playerView)
             playerView.load(withVideoId: videoId)
             dataSource.getComments(forVideo: videoId)
         }

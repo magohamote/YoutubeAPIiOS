@@ -9,28 +9,43 @@
 import XCTest
 
 class YoutubeAPIAppUITest: XCTestCase {
-        
+    
+    var app:XCUIApplication!
+    
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        app = nil
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSearch() {
+        search(terms: "vaporwave")
     }
     
+    func testInfiniteScroll() {
+        search(terms: "vaporwave")
+        app.tables["videoTableView"].swipeUp()
+        app.tables["videoTableView"].swipeUp()
+        app.tables["videoTableView"].swipeUp()
+    }
+    
+    func testDisplayComments() {
+        search(terms: "xxx")
+        app.tables["videoTableView"]/*@START_MENU_TOKEN@*/.staticTexts["XXXTENTACION - SAD! (Official Music Video)"]/*[[".cells.staticTexts[\"XXXTENTACION - SAD! (Official Music Video)\"]",".staticTexts[\"XXXTENTACION - SAD! (Official Music Video)\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.webViews/*@START_MENU_TOKEN@*/.buttons["Play"]/*[[".otherElements[\"YouTube video player\"]",".otherElements[\"YouTube Video Player\"].buttons[\"Play\"]",".buttons[\"Play\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+    }
+    
+    func search(terms: String) {
+        let searchField = app/*@START_MENU_TOKEN@*/.searchFields["Search in YouTube"]/*[[".otherElements[\"searchBar\"].searchFields[\"Search in YouTube\"]",".searchFields[\"Search in YouTube\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        XCTAssertNotNil(searchField)
+        searchField.tap()
+        searchField.typeText(terms)
+        app.buttons["Search"].tap()
+    }
 }

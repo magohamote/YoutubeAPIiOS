@@ -28,6 +28,8 @@ class CommentViewModel {
         
         if let targetURL = URL(string: urlString) {
             service.performGetRequest(targetURL: targetURL, completion: setComments)
+        } else {
+            self.delegate?.didFailGetCommentsWithError(error: QueryError.noResponseError)
         }
     }
     
