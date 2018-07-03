@@ -289,8 +289,8 @@
 		82B24BA520E93B3E00110901 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */,
 				82F9683020EA7F9E00FF0A31 /* String+Height.swift */,
+				82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */,
 				82E2271620EAC0200044EBBE /* UIViewController+Show+Hide.swift */,
 			);
 			path = Extensions;

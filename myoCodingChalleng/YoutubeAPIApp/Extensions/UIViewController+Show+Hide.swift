@@ -21,7 +21,7 @@ extension UIViewController {
     
     // MARK: - Loading
     func showLoadingView(onView view: UIView) {
-        // need to substract status bar and nav bar height in order to have the loading wheel at the center.
+        // need to substract status, search and nav bar height in order to have the loading wheel at the center.
         let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
         let navBarHeight = self.navigationController?.navigationBar.frame.size.height
         let searchBarHeight: CGFloat = 56
