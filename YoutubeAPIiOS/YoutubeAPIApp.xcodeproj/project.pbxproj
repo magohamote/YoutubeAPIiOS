@@ -29,7 +29,6 @@
 		82F9682B20EA551500FF0A31 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9682A20EA551500FF0A31 /* Comment.swift */; };
 		82F9682D20EA57D600FF0A31 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9682C20EA57D600FF0A31 /* CommentCell.swift */; };
 		82F9682F20EA580400FF0A31 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9682E20EA580400FF0A31 /* CommentViewModel.swift */; };
-		82F9683120EA7F9E00FF0A31 /* String+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9683020EA7F9E00FF0A31 /* String+Height.swift */; };
 		82F9684720EB817500FF0A31 /* YoutubeAPIAppUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9684620EB817500FF0A31 /* YoutubeAPIAppUITest.swift */; };
 		82F9684F20EB86AF00FF0A31 /* MockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9684E20EB86AF00FF0A31 /* MockRequest.swift */; };
 		82F9685120EB86CE00FF0A31 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F9685020EB86CE00FF0A31 /* MockService.swift */; };
@@ -92,7 +91,6 @@
 		82F9682A20EA551500FF0A31 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		82F9682C20EA57D600FF0A31 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		82F9682E20EA580400FF0A31 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
-		82F9683020EA7F9E00FF0A31 /* String+Height.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Height.swift"; sourceTree = "<group>"; };
 		82F9683620EB816700FF0A31 /* YoutubeAPIAppUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeAPIAppUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82F9683A20EB816700FF0A31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82F9684420EB817500FF0A31 /* YoutubeAPIAppUITest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeAPIAppUITest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,7 +289,6 @@
 		82B24BA520E93B3E00110901 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				82F9683020EA7F9E00FF0A31 /* String+Height.swift */,
 				82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */,
 				82E2271620EAC0200044EBBE /* UIViewController+Show+Hide.swift */,
 				828E536621B00EFD001FDAAD /* Collection+SafeIndex.swift */,
@@ -561,7 +558,6 @@
 				8245304D20E8F9C500771152 /* AppDelegate.swift in Sources */,
 				82B24BA720E93B5A00110901 /* UIViewController+Identifier.swift in Sources */,
 				82B24B9420E8FDBA00110901 /* Service.swift in Sources */,
-				82F9683120EA7F9E00FF0A31 /* String+Height.swift in Sources */,
 				82B24B9B20E9187C00110901 /* SearchViewModel.swift in Sources */,
 				82E2271720EAC0200044EBBE /* UIViewController+Show+Hide.swift in Sources */,
 				82B24BA120E9279200110901 /* Thumbnail.swift in Sources */,
