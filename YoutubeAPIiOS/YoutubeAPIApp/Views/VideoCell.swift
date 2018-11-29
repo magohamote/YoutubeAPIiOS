@@ -15,13 +15,13 @@ class VideoCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var channelLabel: UILabel!
     
-    func config(withVideo video: Video) {
-        if let thumbnail = video.snippet.thumbnail {
+    func config(withVideo video: Video?) {
+        if let thumbnail = video?.snippet.thumbnail {
             thumbnailImageView.sd_setImage(with: thumbnail.url, placeholderImage: UIImage(named: "videoPlaceholder"), completed: nil)
         } else {
             thumbnailImageView.image = UIImage(named: "videoPlaceholder")
         }
-        titleLabel.text = video.snippet.title
-        channelLabel.text = video.snippet.channelTitle
+        titleLabel.text = video?.snippet.title
+        channelLabel.text = video?.snippet.channelTitle
     }
 }

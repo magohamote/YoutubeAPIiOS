@@ -15,7 +15,10 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var authorNameLabel: UILabel!
     @IBOutlet weak var likeCountsLabel: UILabel!
     
-    func config(withComment comment: Comment) {
+    func config(withComment comment: Comment?) {
+        guard let comment = comment else {
+            return
+        }
         userImageView.sd_setImage(with: comment.authorProfileImageUrl, placeholderImage: UIImage(named: "placeholder"), completed: nil)
         userImageView.layer.masksToBounds = false
         userImageView.layer.cornerRadius = userImageView.frame.height/2

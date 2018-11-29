@@ -13,6 +13,7 @@
 		8245305220E8F9C500771152 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8245305020E8F9C500771152 /* Main.storyboard */; };
 		8245305420E8F9C600771152 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8245305320E8F9C600771152 /* Assets.xcassets */; };
 		8245305720E8F9C600771152 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8245305520E8F9C600771152 /* LaunchScreen.storyboard */; };
+		828E536721B00EFD001FDAAD /* Collection+SafeIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828E536621B00EFD001FDAAD /* Collection+SafeIndex.swift */; };
 		82B24B9420E8FDBA00110901 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24B9320E8FDBA00110901 /* Service.swift */; };
 		82B24B9620E8FFC700110901 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24B9520E8FFC700110901 /* Constants.swift */; };
 		82B24B9B20E9187C00110901 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B24B9A20E9187C00110901 /* SearchViewModel.swift */; };
@@ -73,6 +74,7 @@
 		8245305320E8F9C600771152 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8245305620E8F9C600771152 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8245305820E8F9C600771152 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		828E536621B00EFD001FDAAD /* Collection+SafeIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+SafeIndex.swift"; sourceTree = "<group>"; };
 		82B24B9320E8FDBA00110901 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		82B24B9520E8FFC700110901 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		82B24B9A20E9187C00110901 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				82F9683020EA7F9E00FF0A31 /* String+Height.swift */,
 				82B24BA620E93B5A00110901 /* UIViewController+Identifier.swift */,
 				82E2271620EAC0200044EBBE /* UIViewController+Show+Hide.swift */,
+				828E536621B00EFD001FDAAD /* Collection+SafeIndex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				82B24B9B20E9187C00110901 /* SearchViewModel.swift in Sources */,
 				82E2271720EAC0200044EBBE /* UIViewController+Show+Hide.swift in Sources */,
 				82B24BA120E9279200110901 /* Thumbnail.swift in Sources */,
+				828E536721B00EFD001FDAAD /* Collection+SafeIndex.swift in Sources */,
 				82F9682B20EA551500FF0A31 /* Comment.swift in Sources */,
 				82D9554620E97B6000EEF8BC /* PlayerViewController.swift in Sources */,
 				82B24B9620E8FFC700110901 /* Constants.swift in Sources */,

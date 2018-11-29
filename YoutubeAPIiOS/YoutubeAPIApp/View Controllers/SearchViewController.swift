@@ -15,6 +15,7 @@ class SearchViewController: UIViewController {
     
     private let dataSource = SearchViewModel()
     
+    private var loadingView: UIView?
     private var nextPageToken: String?
     private var searchTerms: String?
     private var tap: UITapGestureRecognizer?
@@ -61,11 +62,15 @@ extension SearchViewController: UISearchBarDelegate {
             
             videosArray.removeAll()
             
-            showLoadingView(onView: view)
+            loadingView = createLoadingView()
+            guard let loadingView = loadingView else {
+                return
+            }
+            view.addSubview(loadingView)
             
             dataSource.search(withSearchTerms: text.trimmingCharacters(in: .whitespacesAndNewlines))
             
-            self.searchBar.endEditing(true)
+            searchBar.endEditing(true)
             
             tap?.isEnabled = false
         }
@@ -82,12 +87,13 @@ extension SearchViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let vc = self.storyboard?.instantiateViewController(withIdentifier: PlayerViewController.identifier) as? PlayerViewController {
-            vc.videoId = videosArray[indexPath.row].id
-            vc.title = videosArray[indexPath.row].snippet.title
-            self.navigationController?.pushViewController(vc, animated: true)
-            tableView.deselectRow(at: indexPath, animated: true)
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: PlayerViewController.identifier) as? PlayerViewController else {
+            return
         }
+        vc.videoId = videosArray[safe: indexPath.row]?.id
+        vc.title = videosArray[safe: indexPath.row]?.snippet.title
+        navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -97,29 +103,31 @@ extension SearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: VideoCell.identifier) as? VideoCell {
-            cell.config(withVideo: videosArray[indexPath.row])
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: VideoCell.identifier) as? VideoCell else {
+            return UITableViewCell()
         }
-        return UITableViewCell()
+        cell.config(withVideo: videosArray[safe: indexPath.row])
+        return cell
     }
 }
 
 extension SearchViewController: SearchViewModelDelegate {
     func didReceiveSearchResult(videos: [Video]?, nextPageToken: String) {
-        hideLoadingView(tableView: tableView)
+        loadingView?.removeFromSuperview()
+        tableView.refreshControl?.endRefreshing()
         if let videos = videos {
             if videos.count == 0 {
                 showMessage(withTitle: "No video", withMessage: "Sorry, we didn't find any video.")
             } else {
-                self.videosArray.append(contentsOf: videos)
+                videosArray.append(contentsOf: videos)
             }
         }
         self.nextPageToken = nextPageToken
     }
     
     func didFailGetSearchResultWithError(error: Error?) {
-        hideLoadingView(tableView: tableView)
+        loadingView?.removeFromSuperview()
+        tableView.refreshControl?.endRefreshing()
         if let error = error {
             showMessage(withTitle: "Error", withMessage: error.localizedDescription)
         } else {
@@ -127,4 +135,3 @@ extension SearchViewController: SearchViewModelDelegate {
         }
     }
 }
-
