@@ -25,7 +25,7 @@ extension UIViewController {
         let statusBarHeight = UIApplication.shared.statusBarFrame.size.height
         let navBarHeight = self.navigationController?.navigationBar.frame.size.height
         let searchBarHeight: CGFloat = 56
-        let loadingView = UIView(frame: CGRect(origin: view.frame.origin, size: CGSize(width: view.frame.width, height: view.frame.height - statusBarHeight - searchBarHeight - (navBarHeight ?? 0))))
+        let loadingView = UIView(frame: CGRect(origin: view.bounds.origin, size: CGSize(width: view.bounds.width, height: view.bounds.height - statusBarHeight - searchBarHeight - (navBarHeight ?? 0))))
         loadingView.tag = 42
         loadingView.backgroundColor = .white
         

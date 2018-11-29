@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  myoCodingChalleng
+//  YoutubeAPIApp
 //
 //  Created by Cédric Rolland on 01.07.18.
 //  Copyright © 2018 Cédric Rolland. All rights reserved.
@@ -40,4 +40,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 }
-

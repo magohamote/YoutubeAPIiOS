@@ -8,11 +8,15 @@
 
 import Foundation
 
+enum httpMethod: String {
+    case GET = "GET"
+}
+
 class Service {
     
     func performGetRequest(targetURL: URL, completion: @escaping (_ data: Data?, _ urlResponse: URLResponse?, _ error: Error?) -> Void) {
         var request = URLRequest(url: targetURL)
-        request.httpMethod = "GET"
+        request.httpMethod = httpMethod.GET.rawValue
         
         let sessionConfiguration = URLSessionConfiguration.default
         

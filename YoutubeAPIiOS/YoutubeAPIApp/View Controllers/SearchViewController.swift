@@ -1,6 +1,6 @@
 //
 //  SearchViewController.swift
-//  myoCodingChalleng
+//  YoutubeAPIApp
 //
 //  Created by Cédric Rolland on 01.07.18.
 //  Copyright © 2018 Cédric Rolland. All rights reserved.
