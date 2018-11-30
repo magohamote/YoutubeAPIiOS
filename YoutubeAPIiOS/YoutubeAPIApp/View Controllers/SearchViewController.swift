@@ -10,8 +10,8 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar?
+    @IBOutlet weak var tableView: UITableView?
     
     private let dataSource = SearchViewModel()
     
@@ -33,10 +33,10 @@ class SearchViewController: UIViewController {
         nextPageToken = ""
         searchTerms = ""
         
-        searchBar.delegate = self
+        searchBar?.delegate = self
         dataSource.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView?.delegate = self
+        tableView?.dataSource = self
         
         tap = UITapGestureRecognizer(target: self, action: #selector(SearchViewController.dismissKeyboard(_:)))
         if let tap = self.tap {
@@ -44,8 +44,8 @@ class SearchViewController: UIViewController {
         }
     }
     
-    @objc func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        searchBar.endEditing(true)
+    @objc private func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        searchBar?.endEditing(true)
         tap?.isEnabled = false
     }
 }
@@ -113,8 +113,7 @@ extension SearchViewController: UITableViewDataSource {
 
 extension SearchViewController: SearchViewModelDelegate {
     func didReceiveSearchResult(videos: [Video]?, nextPageToken: String) {
-        loadingView?.removeFromSuperview()
-        tableView.refreshControl?.endRefreshing()
+        hideLoadingView()
         if let videos = videos {
             if videos.count == 0 {
                 showMessage(withTitle: "No video", withMessage: "Sorry, we didn't find any video.")
@@ -126,12 +125,16 @@ extension SearchViewController: SearchViewModelDelegate {
     }
     
     func didFailGetSearchResultWithError(error: Error?) {
-        loadingView?.removeFromSuperview()
-        tableView.refreshControl?.endRefreshing()
+        hideLoadingView()
         if let error = error {
             showMessage(withTitle: "Error", withMessage: error.localizedDescription)
         } else {
             showMessage(withTitle: "Error", withMessage: "An unknown error occured")
         }
+    }
+    
+    private func hideLoadingView() {
+        loadingView?.removeFromSuperview()
+        tableView?.refreshControl?.endRefreshing()
     }
 }

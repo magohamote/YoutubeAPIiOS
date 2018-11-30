@@ -10,15 +10,15 @@ import UIKit
 
 class PlayerViewController: UIViewController {
     
-    @IBOutlet weak var playerView: YTPlayerView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var playerView: YTPlayerView?
+    @IBOutlet weak var tableView: UITableView?
     
     var videoId: String?
     
     private var nextPageToken: String?
     private let dataSource = CommentViewModel()
     
-    internal var commentsArray = [Comment]() {
+    private var commentsArray = [Comment]() {
         didSet {
             tableView?.reloadData()
         }
@@ -28,13 +28,13 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
         
         dataSource.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView?.delegate = self
+        tableView?.dataSource = self
         
-        tableView.tableFooterView = UIView()
+        tableView?.tableFooterView = UIView()
         
         if let videoId = self.videoId {
-            playerView.load(withVideoId: videoId)
+            playerView?.load(withVideoId: videoId)
             dataSource.getComments(forVideo: videoId)
         }
     }

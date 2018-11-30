@@ -17,7 +17,7 @@ class SearchViewModel {
     
     weak var delegate: SearchViewModelDelegate?
     
-    internal var service = Service()
+    private var service = Service()
     
     func search(withSearchTerms searchTerms: String, nextPageToken: String? = nil) {
         

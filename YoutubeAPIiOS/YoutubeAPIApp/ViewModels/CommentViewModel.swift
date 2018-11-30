@@ -17,7 +17,7 @@ class CommentViewModel {
     
     weak var delegate: CommentViewModelDelegate?
     
-    internal var service = Service()
+    private var service = Service()
     
     func getComments(forVideo videoId: String, nextPageToken: String? = nil) {
         var urlString = "\(URLs.baseURL)\(URLs.commentObject)videoId=\(videoId)\(URLs.commentType)&key=\(Keys.apiKey)"
