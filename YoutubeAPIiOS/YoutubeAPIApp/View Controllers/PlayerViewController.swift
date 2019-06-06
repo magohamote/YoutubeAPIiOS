@@ -26,6 +26,7 @@ class PlayerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         dataSource.delegate = self
         tableView?.delegate = self
         tableView?.dataSource = self
