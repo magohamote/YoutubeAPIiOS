@@ -19,6 +19,7 @@ class VideoCell: UITableViewCell {
         if let thumbnail = video?.snippet.thumbnail {
             thumbnailImageView?.sd_setImage(with: thumbnail.url, placeholderImage: UIImage(named: "videoPlaceholder"), completed: nil)
         } else {
+            
             thumbnailImageView?.image = UIImage(named: "videoPlaceholder")
         }
         titleLabel?.text = video?.snippet.title

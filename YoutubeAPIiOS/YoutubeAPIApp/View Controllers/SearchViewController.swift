@@ -21,6 +21,7 @@ class SearchViewController: UIViewController {
     private var tap: UITapGestureRecognizer?
     private var videosArray = [Video]() {
         didSet {
+            
             tableView?.reloadData()
         }
     }
@@ -32,6 +33,7 @@ class SearchViewController: UIViewController {
             
         nextPageToken = ""
         searchTerms = ""
+        
         
         searchBar?.delegate = self
         dataSource.delegate = self
