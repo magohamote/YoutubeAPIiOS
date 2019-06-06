@@ -20,6 +20,8 @@ class PlayerViewController: UIViewController {
     
     private var commentsArray = [Comment]() {
         didSet {
+            // comment
+            // another comment
             tableView?.reloadData()
         }
     }
@@ -28,7 +30,9 @@ class PlayerViewController: UIViewController {
         super.viewDidLoad()
         
         dataSource.delegate = self
+        
         tableView?.delegate = self
+        
         tableView?.dataSource = self
         
         tableView?.tableFooterView = UIView()
