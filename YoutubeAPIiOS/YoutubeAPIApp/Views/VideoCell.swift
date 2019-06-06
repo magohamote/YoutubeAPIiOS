@@ -22,7 +22,12 @@ class VideoCell: UITableViewCell {
             
             thumbnailImageView?.image = UIImage(named: "videoPlaceholder")
         }
+        // long commment
         titleLabel?.text = video?.snippet.title
         channelLabel?.text = video?.snippet.channelTitle
     }
+}
+
+extension VideoCell {
+    
 }
